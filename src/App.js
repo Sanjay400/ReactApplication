@@ -8,8 +8,10 @@ import Login from './Login/Login';
 import Products from './Products/Products';
 import Shipping from './Shipping/Shipping';
 import './App.css'; // Make sure to include this at the top of App.js
-
-
+import AdminLogin from './Admin/AdminLogin';
+import AdminDashboard from './AdminDashboard/AdminDashboard';
+import UserDetails from './UserDetails/UserDetails';
+import ProductManage from './ProductManage/ProductManage';
 function App() {
   return (
     <div >
@@ -22,6 +24,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/user-details" element={<UserDetails />} />
+        <Route path="/admin/product-manage" element={<ProductManage />} />
       </Routes>
       </div>
     </div>

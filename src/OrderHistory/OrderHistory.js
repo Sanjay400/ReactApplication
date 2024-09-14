@@ -1,4 +1,3 @@
-// src/OrderHistory/OrderHistory.js
 import React, { useEffect, useState } from 'react';
 import './OrderHistory.css';
 
@@ -22,10 +21,23 @@ const OrderHistory = () => {
     fetchOrders();
   }, []);
 
-  const handleCancelOrder = async (orderId) => {
+  const handleCancelOrder = async (orderId, orderDate) => {
     const loggedInUser = JSON.parse(localStorage.getItem('user'));
-
     if (!loggedInUser) return;
+
+    // Check if the cancellation is within 24 hours of placing the order
+    const currentDate = new Date();
+    const orderDateObj = new Date(orderDate);
+    const timeDifference = currentDate.getTime() - orderDateObj.getTime();
+    const hoursDifference = timeDifference / (1000 * 3600);
+
+    if (hoursDifference > 24) {
+      alert('You can only cancel the order within 24 hours of placing it.');
+      return;
+    }
+
+    const confirmCancel = window.confirm("Are you sure you want to cancel this order?");
+    if (!confirmCancel) return;
 
     const updatedOrderHistory = orders.filter(order => order.id !== orderId);
 
@@ -55,7 +67,7 @@ const OrderHistory = () => {
   return (
     <div className="order-history-container">
       <h2>Order History</h2>
-      
+
       {orders.length === 0 ? (
         <p>No orders found.</p>
       ) : (
@@ -72,9 +84,9 @@ const OrderHistory = () => {
                     alt={product.name}
                     className="product-image"
                   />
-                  <div className="product-details">
+                  <div className="order">
                     <h4>{product.name}</h4>
-                    <p><strong>Price:</strong> ${product.price ? product.price.toFixed(2) : 'N/A'}</p>
+                    <p><strong>Price:</strong> ${Number(product.price).toFixed(2) || 'N/A'}</p>
                     <p><strong>Quantity:</strong> {product.quantity || 'N/A'}</p>
                   </div>
                 </div>
@@ -82,7 +94,7 @@ const OrderHistory = () => {
             </div>
             <button
               className="cancel-order-btn"
-              onClick={() => handleCancelOrder(order.id)}
+              onClick={() => handleCancelOrder(order.id, order.orderDate)}
             >
               Cancel Order
             </button>

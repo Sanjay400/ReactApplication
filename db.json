@@ -97,15 +97,15 @@
       "image": "image8.jpg"
     },
     {
-      "id": "9",
-      "name": "NIBOSI ",
-      "rating": 4.4,
-      "brand": "Brand I",
+      "id": "57b1",
+      "name": "Classic",
+      "rating": "4.5",
+      "brand": "Brand Z",
       "color": "Brown",
       "gender": "Female",
-      "price": 109.99,
-      "offers": "15% off",
-      "description": "NIBOSI Stainless Steel Women Watches",
+      "price": "100",
+      "offers": "No Offer",
+      "description": "Nothing",
       "image": "image9.jpeg"
     }
   ],
@@ -116,21 +116,7 @@
       "email": "sanjudddd400@gmail.com",
       "password": "Sanjay@2002",
       "phoneNo": "8907564578",
-      "cart": [
-        {
-          "id": "1",
-          "name": "Classic Silver Watch",
-          "rating": 4.5,
-          "brand": "Brand A",
-          "color": "Silver",
-          "gender": "Unisex",
-          "price": 149.99,
-          "offers": "10% off",
-          "description": "Elegant silver watch with a stainless steel band.",
-          "image": "image1.jpg",
-          "quantity": 1
-        }
-      ],
+      "cart": [],
       "orderHistory": [
         {
           "id": 1725863646865,
@@ -183,6 +169,32 @@
             "phone": "78969087645",
             "paymentType": "Online Pay"
           }
+        },
+        {
+          "id": 1726150349548,
+          "products": [
+            {
+              "id": "1",
+              "name": "Classic Silver Watch",
+              "rating": 4.5,
+              "brand": "Brand A",
+              "color": "Silver",
+              "gender": "Unisex",
+              "price": 149.99,
+              "offers": "10% off",
+              "description": "Elegant silver watch with a stainless steel band.",
+              "image": "image1.jpg",
+              "quantity": 1
+            }
+          ],
+          "deliveryDate": "2024-09-14",
+          "orderDate": "2024-09-12",
+          "shippingDetails": {
+            "email": "sanjudddd400@gmail.com",
+            "address": "Vinaiyagar",
+            "phone": "78969087645",
+            "paymentType": "Online Pay"
+          }
         }
       ]
     },
@@ -221,6 +233,57 @@
           }
         }
       ]
+    },
+    {
+      "id": "15c3",
+      "userName": "Sanjay N",
+      "email": "sanjay500@gmail.com",
+      "password": "SanjayN@2002",
+      "phoneNo": "8956798890",
+      "cart": [
+        {
+          "id": "1",
+          "name": "Classic Silver Watch",
+          "rating": 4.5,
+          "brand": "Brand A",
+          "color": "Silver",
+          "gender": "Unisex",
+          "price": 149.99,
+          "offers": "10% off",
+          "description": "Elegant silver watch with a stainless steel band.",
+          "image": "image1.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Classic Silver Watch",
+          "rating": 4.5,
+          "brand": "Brand A",
+          "color": "Silver",
+          "gender": "Unisex",
+          "price": 149.99,
+          "offers": "10% off",
+          "description": "Elegant silver watch with a stainless steel band.",
+          "image": "image1.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "name": "Luxury Gold Watch",
+          "rating": 4.8,
+          "brand": "Brand B",
+          "color": "Gold",
+          "gender": "Male",
+          "price": 299.99,
+          "offers": "15% off",
+          "description": "Luxurious gold watch with a leather strap.",
+          "image": "image2.jpg",
+          "quantity": 1
+        }
+      ],
+      "orderHistory": [],
+      "active": true,
+      "banned": true
     }
   ]
 }
