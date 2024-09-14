@@ -97,14 +97,14 @@
       "image": "image8.jpg"
     },
     {
-      "id": "57b1",
+      "id": "1a41",
       "name": "Classic",
-      "rating": "4.5",
+      "rating": "4.0",
       "brand": "Brand Z",
       "color": "Brown",
       "gender": "Female",
-      "price": "100",
-      "offers": "No Offer",
+      "price": "90",
+      "offers": "No Offers",
       "description": "Nothing",
       "image": "image9.jpeg"
     }
@@ -115,8 +115,22 @@
       "userName": "Sanjay",
       "email": "sanjudddd400@gmail.com",
       "password": "Sanjay@2002",
-      "phoneNo": "8907564578",
-      "cart": [],
+      "phoneNo": "8907564579",
+      "cart": [
+        {
+          "id": "1",
+          "name": "Classic Silver Watch",
+          "rating": 4.5,
+          "brand": "Brand A",
+          "color": "Silver",
+          "gender": "Unisex",
+          "price": 149.99,
+          "offers": "10% off",
+          "description": "Elegant silver watch with a stainless steel band.",
+          "image": "image1.jpg",
+          "quantity": 1
+        }
+      ],
       "orderHistory": [
         {
           "id": 1725863646865,

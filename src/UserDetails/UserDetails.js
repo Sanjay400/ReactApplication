@@ -157,8 +157,15 @@ const UserDetails = () => {
                   onChange={handleEditChange}
                 />
               </label>
-              <button onClick={handleSaveChanges}>Save Changes</button>
-              <button onClick={() => setEditing(false)}>Cancel</button>
+              <div className="button-group">
+  <button className="save-button" onClick={handleSaveChanges}>
+    Save Changes
+  </button>
+  <button className="cancel-button" onClick={() => setEditing(false)}>
+    Cancel
+  </button>
+</div>
+
             </div>
           ) : (
             <div>
