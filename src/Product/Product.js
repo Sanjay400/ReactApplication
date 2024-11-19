@@ -15,7 +15,7 @@ const Product = ({ product }) => {
         <p><strong>Color:</strong> {color}</p>
         <p><strong>Gender:</strong> {gender}</p>
         <p><strong>Rating:</strong> {rating} ★</p>
-        <p><strong>Price:</strong> ${price.toFixed(2)}</p>
+        <p><strong>Price:</strong> {price.toFixed(2)}</p>
         <p className="product-offers">{offers}</p>
         <button className="buy-now-btn">Add To Cart</button>
       </div>
